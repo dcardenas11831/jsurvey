@@ -49,10 +49,10 @@
 						enabled: true,
 
 					// Sets the momentum factor. Must be a value between 0 and 1 (lower = less momentum, higher = more momentum, 0 = disable momentum scrolling).
-						momentum: 0.875,
+						momentum: 0,
 
 					// Sets the drag threshold (in pixels).
-						threshold: 10
+						threshold: 750
 
 				},
 

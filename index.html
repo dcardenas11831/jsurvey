@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <!--
+	Elaborado por Daniel Cárdenas con base en
 	Ethereal by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Ethereal by HTML5 UP</title>
+		<title>Página interactiva Ecopetrol</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximun scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
@@ -26,7 +27,7 @@
 							<section class="panel spotlight medium item active" id="p1">
 								<div class="content color2" style="width:100%">
                                     <ul class="actions">
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p2" onclick="return resetP1();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; right:20px;"><a href="#p2" onclick="return resetP1();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -94,9 +95,20 @@
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
                                     </p>
-                                    <p align="center">
 
-                                    </p>
+                                        <div id="draggable" class="ui-widget-content">
+                                          <p>Drag me around</p>
+                                        </div>
+                                     <div id="hammerdrag" style=""></div>
+                                    <script>
+                                        var element = document.getElementById("draggable");
+                                        var hammertime = Hammer(element);
+
+                                        element.on("drag", function(event) {
+                                            element.style.left = event.gesture.touches[0].pageX;
+                                            element.style.top = event.gesture.touches[0].pageY;
+                                        });
+                                    </script>
 								</div>
 
 							</section>

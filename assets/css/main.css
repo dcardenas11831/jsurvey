@@ -33,6 +33,8 @@ body {
 	line-height: 1;
 }
 
+#draggable { width: 70px; height: 70px; padding: 0.5em; }
+
 ol, ul {
 	list-style: none;
 }
