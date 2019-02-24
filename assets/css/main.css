@@ -43,6 +43,19 @@ body {
   height: 150px;
   color: #1C2747;
 }
+#divI {
+  animation-timing-function: ease-out;
+  animation: mymove 5s infinite;
+  width: 211px;
+  height: 154px;
+
+}
+/* Standard syntax */
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+  100% {background-color:transparent; }
+}
 
 ol, ul {
 	list-style: none;

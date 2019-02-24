@@ -277,12 +277,48 @@
 							<section class="panel spotlight medium item active" id="p8">
 								<div class="content color2" style="width:100%">
 									<ul class="actions">
-										<li style="position: absolute; left:20px;"><a href="#p7" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+										<li style="position: absolute; left:20px;"><a href="#p7" onclick="return resetP8();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
                                     </p>
+                                    <p align="center" class="span-1-5">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <ul class="actions">
+                                            <li><a onclick="return changeMap();" class="button primary color1 circle icon fa-play"></a></li>
+                                        </ul>
+                                    <div id="divI" style="width:211px;height:154px;top:30em;animation-play-state:paused;">
+                                        <img src="images/gallery/i.png">
+                                    </div>
+                                    <div class="panel" style="width:75%">
+                                        <img id="divC" src="images/gallery/cn.png">
+                                    </div>
+
+
 								</div>
+                                <script>
+                                    function changeMap() {
+                                        let ele = document.getElementById('divI');
+                                        ele.style.animationPlayState = "running";
+                                        console.log(ele);
+
+                                        let map = document.getElementById('divC');
+                                        map.src = "images/gallery/cv.png";
+
+                                        return true;
+                                    };
+                                    function resetP8() {
+                                        let ele = document.getElementById('divI');
+                                        ele.style.animationPlayState = "paused";
+                                        ele.style.visibility = "hidden";
+
+                                        let map = document.getElementById('divC');
+                                        map.src = "images/gallery/cn.png";
+                                        return true;
+                                    }
+                                </script>
 							</section>
 			</div>
 
