@@ -14,7 +14,8 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
-        <script src="jquery.ui.touch-punch.min.js"></script>
+        <!--<script src="jquery.ui.touch-punch.min.js"></script>-->
+        <script src="http://hammerjs.github.io/dist/hammer.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -89,27 +90,46 @@
 							<section class="panel spotlight medium item active" id="p2">
 								<div class="content color2" style="width:100%">
                                     <ul class="actions">
-                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p1" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p3" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p1" onclick="return resetP2();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p3" onclick="return resetP2();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
                                     </p>
 
-                                        <div id="draggable" class="ui-widget-content">
-                                          <p>Drag me around</p>
-                                        </div>
-                                     <div id="hammerdrag" style=""></div>
-                                    <script>
-                                        var element = document.getElementById("draggable");
-                                        var hammertime = Hammer(element);
+                                    <ul class="actions">
+                                        <li><a onclick="return showElement(1);" class="button primary color1 circle">1</a></li>
+                                        <li><a onclick="return showElement(2);" class="button primary color1 circle">2</a></li>
+                                        <li><a onclick="return showElement(3);" class="button primary color1 circle">3</a></li>
+									</ul>
 
-                                        element.on("drag", function(event) {
-                                            element.style.left = event.gesture.touches[0].pageX;
-                                            element.style.top = event.gesture.touches[0].pageY;
-                                        });
-                                    </script>
+                                    <p align="center">
+                                        <label id="e1" style="border-radius: 25px;  background: #F4DB1B;  padding: 10px;  width: 270px;  height: auto; font-size:1.2em; text-align:center; color: #1C2747; visibility:hidden;">Estrategia 2020 Revisada<br> 4Q 2016</label></p>
+                                        <hr>
+                                    <p align="center">
+                                        <label id="e2" style="border-radius: 25px;  background: #F4DB1B;  padding: 10px;  width: 270px;  height: auto; font-size:1.2em; text-align:center; color: #1C2747; visibility:hidden;">Estrategia 2020+ <br> 4Q 2017</label></p>
+                                        <hr>
+                                    <p align="center">
+                                        <label id="e3" style="border-radius: 25px;  background: #F4DB1B;  padding: 10px;  width: 270px;  height: auto; font-size:1.2em; text-align:center; color: #1C2747; visibility:hidden;">Estrategia 2020 <br> 1Q 2015</label></p>
+
+
 								</div>
+                                <script>
+                                    function showElement(idbtn) {
+                                        let ele = document.getElementById('e'+idbtn);
+                                        console.log(ele);
+                                        ele.style.visibility='visible';
+                                        console.log(ele);
+                                        return true;
+                                    };
+                                    function resetP2() {
+                                        for (i = 1; i <= 3; i++) {
+                                            let ele = document.getElementById('e'+i);
+                                            ele.style.visibility='hidden';
+                                        }
+                                        return true;
+                                    }
+                                </script>
 
 							</section>
 
@@ -118,8 +138,8 @@
 							<section class="panel spotlight medium item active" id="p3">
 								<div class="content color2" style="width:100%">
                                     <ul class="actions">
-                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p2" onclick="return resetP3();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p4" onclick="return resetP3();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; left:20px;"><a href="#p2" onclick="return resetP3();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:20px;"><a href="#p4" onclick="return resetP3();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -155,8 +175,8 @@
 							<section class="panel spotlight medium item active" id="p4">
 								<div class="content color2" style="width:100%">
 									<ul class="actions">
-                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p3" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p5" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; left:20px;"><a href="#p3" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:20px;"><a href="#p5" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -181,8 +201,8 @@
 							<section class="panel spotlight medium item active" id="p5">
 								<div class="content color2" style="width:100%">
 									<ul class="actions">
-                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p4" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p6" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; left:20px;"><a href="#p4" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:20px;"><a href="#p6" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -206,8 +226,8 @@
 							<section class="panel spotlight medium item active" id="p6">
 								<div class="content color2" style="width:100%">
 									<ul class="actions">
-                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p5" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p7" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; left:20px;"><a href="#p5" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:20px;"><a href="#p7" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -232,8 +252,8 @@
 							<section class="panel spotlight medium item active" id="p7">
 								<div class="content color2" style="width:100%">
 									<ul class="actions">
-                                        <li style="position: absolute; top:30em; left:10px;"><a href="#p6" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-                                        <li style="position: absolute; top:30em; right:10px;"><a href="#p8" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; left:20px;"><a href="#p6" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:20px;"><a href="#p8" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -257,7 +277,7 @@
 							<section class="panel spotlight medium item active" id="p8">
 								<div class="content color2" style="width:100%">
 									<ul class="actions">
-										<li style="position: absolute; left:10px;"><a href="#p7" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+										<li style="position: absolute; left:20px;"><a href="#p7" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">

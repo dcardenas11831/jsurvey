@@ -35,6 +35,15 @@ body {
 
 #draggable { width: 70px; height: 70px; padding: 0.5em; }
 
+#rcorners1 {
+  border-radius: 25px;
+  background: #F4DB1B;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  color: #1C2747;
+}
+
 ol, ul {
 	list-style: none;
 }
