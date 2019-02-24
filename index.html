@@ -276,46 +276,65 @@
                         <!-- Panel 8 -->
 							<section class="panel spotlight medium item active" id="p8">
 								<div class="content color2" style="width:100%">
-									<ul class="actions">
-										<li style="position: absolute; left:20px;"><a href="#p7" onclick="return resetP8();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
-									</ul>
+
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
                                     </p>
-                                    <p align="center" class="span-1-5">
+                                    <div class="flex-container">
+                                        <br>
                                         <br>
                                         <br>
                                         <br>
                                         <ul class="actions">
-                                            <li><a onclick="return changeMap();" class="button primary color1 circle icon fa-play"></a></li>
-                                        </ul>
-                                    <div id="divI" style="width:211px;height:154px;top:30em;animation-play-state:paused;">
-                                        <img src="images/gallery/i.png">
-                                    </div>
-                                    <div class="panel" style="width:75%">
-                                        <img id="divC" src="images/gallery/cn.png">
+										        <li style="position: absolute; left:20px; z:10;"><a href="#p7" onclick="return resetP8();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+									        </ul>
+                                        <div class="flex-container-vertical">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div id="divI">
+                                                <img id="iguana" src="images/gallery/i.png">
+                                            </div>
+                                            <ul id="play" class="actions">
+                                                <li><a onclick="return changeMap();" class="button primary color1 circle icon fas fa-play fa-2x"></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="panel">
+                                            <img id="divC" src="images/gallery/cn.png">
+                                        </div>
                                     </div>
 
 
 								</div>
                                 <script>
+                                    document.getElementById("iguana").addEventListener("transitionend", changeMap);
                                     function changeMap() {
-                                        let ele = document.getElementById('divI');
-                                        ele.style.animationPlayState = "running";
-                                        console.log(ele);
+                                        let ele = document.getElementById('iguana');
+                                        ele.classList.add("divI");
+                                        let play = document.getElementById('play');
+                                        //ele.style.visibility = "hidden";
+                                        //console.log(ele);
+                                        setTimeout(function(){
+                                            let map = document.getElementById('divC');
+                                            map.src = "images/gallery/cv.png";
+                                            ele.style.visibility = "hidden";
+                                            play.style.visibility = "hidden";
 
-                                        let map = document.getElementById('divC');
-                                        map.src = "images/gallery/cv.png";
+                                        }, 7000);
+
 
                                         return true;
                                     };
                                     function resetP8() {
-                                        let ele = document.getElementById('divI');
-                                        ele.style.animationPlayState = "paused";
-                                        ele.style.visibility = "hidden";
+                                        let ele = document.getElementById('iguana');
+                                        ele.classList.remove("divI");
+                                        ele.style.visibility = "visible";
 
                                         let map = document.getElementById('divC');
                                         map.src = "images/gallery/cn.png";
+
+                                        let play = document.getElementById('play');
+                                        play.style.visibility = "visible";
                                         return true;
                                     }
                                 </script>
