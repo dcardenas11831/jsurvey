@@ -48,10 +48,24 @@
                                         <br>
                                         <br>
                                         <label id="lblEmp" style="font-size:1.5em"></label>
+                                        <label id="lblls" style="font-size:1.5em"></label>
                                     </p>
 
 								</div>
                                 <script>
+                                    window.addEventListener('devicelight', function(event) {
+
+                                        let lbl = document.getElementById('lblls');
+                                        lbl.innerHTML = event.value;
+
+                                            //event.value is the lux value returned by the sensor on the device
+                                            if (event.value < 100) {
+
+                                            lbl.innerHTML = "Hey, you! You are working in a dark environment";
+                                            }
+
+                                        });
+
                                     function changeLabel(idbtn) {
                                         let lbl = document.getElementById('lblEmp');
                                         let empName = "texto a visualizar";
@@ -77,24 +91,7 @@
                                         // Assign HTML codes along with text values using innerHTML.
                                         lbl.innerHTML = empName;
 
-                                        window.addEventListener('devicelight', function(event) {
 
-                                            var bodyBg= document.body.style;
-
-                                            //event.value is the lux value returned by the sensor on the device
-                                            if (event.value < 100) {
-
-                                            alert('Hey, you! You are working in a dark environment');
-
-                                            bodyBg.backgroundColor="lightgrey";
-
-                                            } else {
-
-                                            bodyBg.backgroundColor="#fff";
-
-                                            }
-
-                                        });
 
                                     };
                                     function resetP1 () {
