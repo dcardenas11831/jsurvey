@@ -76,6 +76,15 @@
 
                                         // Assign HTML codes along with text values using innerHTML.
                                         lbl.innerHTML = empName;
+
+                                        window.addEventListener("devicelight", function (event) {
+
+                                            // Read out the lux value
+                                            var luminosity = event.value;
+                                            alert(luminosity);
+
+                                        });
+
                                     };
                                     function resetP1 () {
                                         let lbl = document.getElementById('lblEmp');
