@@ -109,10 +109,10 @@
       <find>#</find>
       <find>divI</find>
       <find>spotli</find>
-      <find>medium</find>
       <find>height</find>
-      <find>right:</find>
       <find>panel</find>
+      <find>medium</find>
+      <find>right:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
