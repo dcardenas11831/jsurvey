@@ -46,7 +46,7 @@
 				dragging: {
 
 					// If true, enables scrolling by dragging the main wrapper with the mouse.
-						enabled: true,
+						enabled: false,
 
 					// Sets the momentum factor. Must be a value between 0 and 1 (lower = less momentum, higher = more momentum, 0 = disable momentum scrolling).
 						momentum: 0,
