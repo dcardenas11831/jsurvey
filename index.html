@@ -77,11 +77,22 @@
                                         // Assign HTML codes along with text values using innerHTML.
                                         lbl.innerHTML = empName;
 
-                                        window.addEventListener("devicelight", function (event) {
+                                        window.addEventListener('devicelight', function(event) {
 
-                                            // Read out the lux value
-                                            var luminosity = event.value;
-                                            alert(luminosity);
+                                            var bodyBg= document.body.style;
+
+                                            //event.value is the lux value returned by the sensor on the device
+                                            if (event.value < 100) {
+
+                                            alert('Hey, you! You are working in a dark environment');
+
+                                            bodyBg.backgroundColor="lightgrey";
+
+                                            } else {
+
+                                            bodyBg.backgroundColor="#fff";
+
+                                            }
 
                                         });
 
