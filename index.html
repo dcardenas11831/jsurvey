@@ -28,7 +28,7 @@
 							<section class="panel spotlight medium item active" id="p1">
 								<div class="content color2" style="width:100%">
                                     <ul class="actions">
-                                        <li style="position: absolute; top:30em; right:40px;"><a id="p1n" href="#p2" onclick="return resetP1();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p2" onclick="return resetP1();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
 									</ul>
                                     <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
                                         <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
@@ -53,23 +53,6 @@
 
 								</div>
                                 <script>
-
-                                    setTimeout(function(){ location.hash='#p2'}, 20000);
-                                    if ('ondevicelight' in window) {
-                                      window.addEventListener('devicelight', function(event) {
-                                        var body = document.querySelector('body');
-                                        if (event.value < 50) {
-                                          body.classList.add('darklight');
-                                          body.classList.remove('brightlight');
-                                        } else {
-                                          body.classList.add('brightlight');
-                                          body.classList.remove('darklight');
-                                        }
-                                      });
-                                    } else {
-                                      console.log('devicelight event not supported');
-                                    };
-
                                     function changeLabel(idbtn) {
                                         let lbl = document.getElementById('lblEmp');
                                         let empName = "texto a visualizar";
@@ -119,9 +102,9 @@
                                     </p>
 
                                     <ul class="actions">
-                                        <li><a onclick="return showElement(1);" class="button primary color1 circle">1</a></li>
-                                        <li><a onclick="return showElement(2);" class="button primary color1 circle">2</a></li>
-                                        <li><a onclick="return showElement(3);" class="button primary color1 circle">3</a></li>
+                                        <li><input type="image" src="images/b1.png" id="b1" onclick="showElement(1)" style="width:2.5em; height:2.5em;"></li>
+                                        <li><input type="image" src="images/b2.png" id="b2" onclick="showElement(2)" style="width:2.5em; height:2.5em;"></li>
+                                        <li><input type="image" src="images/b3.png" id="b3" onclick="showElement(3)" style="width:2.5em; height:2.5em;"></li>
 									</ul>
 
                                     <p align="center">
@@ -317,7 +300,7 @@
                                                 <img id="iguana" src="images/gallery/i.png">
                                             </div>
                                             <ul id="play" class="actions">
-                                                <li><a onclick="return changeMap();" class="button primary color1 circle icon fas fa-play fa-2x"></a></li>
+                                                <li><input type="image" src="images/play.png" onclick="changeMap()" style="width:3.5em; height:3.5em;"></li>
                                             </ul>
                                         </div>
                                         <div class="panel">
@@ -335,11 +318,12 @@
                                         let play = document.getElementById('play');
                                         //ele.style.visibility = "hidden";
                                         //console.log(ele);
+                                        play.style.visibility = "hidden";
                                         setTimeout(function(){
                                             let map = document.getElementById('divC');
                                             map.src = "images/gallery/cv.png";
                                             ele.style.visibility = "hidden";
-                                            play.style.visibility = "hidden";
+
 
                                         }, 7000);
 
