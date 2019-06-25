@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<!--
+	Elaborado por Daniel Cárdenas con base en
+	Ethereal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Página interactiva Ecopetrol</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximun scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+        <!--<script src="jquery.ui.touch-punch.min.js"></script>-->
+        <!--<script src="http://hammerjs.github.io/dist/hammer.js"></script>-->
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper" class="carousel-inner">
+				<!-- Wrapper -->
+					<!--<div id="wrapper">-->
+
+						<!-- Panel 1 -->
+							<section class="panel spotlight medium item active" id="p1">
+								<div class="content color2" style="width:100%">
+                                    <ul class="actions">
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p2" onclick="return resetP1();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <p align="center">
+                                        <br>
+                                        <br>
+                                        <input type="image" src="images/gallery/i1.png" id="bt1" onclick="changeLabel(1)">
+                                        <input type="image" src="images/gallery/i2.png" id="bt2" onclick="changeLabel(2)">
+                                        <input type="image" src="images/gallery/i3.png" id="bt3" onclick="changeLabel(3)">
+                                        <br>
+                                        <input type="image" src="images/gallery/i4.png" id="bt4" onclick="changeLabel(4)">
+                                        <input type="image" src="images/gallery/i5.png" id="bt5" onclick="changeLabel(5)">
+                                        <input type="image" src="images/gallery/i6.png" id="bt6" onclick="changeLabel(6)">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <label id="lblEmp" style="font-size:1.5em"></label>
+                                        <label id="lblls" style="font-size:1.5em"></label>
+                                    </p>
+
+								</div>
+                                <script>
+                                    function changeLabel(idbtn) {
+                                        let lbl = document.getElementById('lblEmp');
+                                        let empName = "texto a visualizar";
+                                        if (idbtn == 1) {
+                                            empName = "Se diversifica hacia geografía y cuencas para convertirse en una compañía Panamericana"
+                                        }
+                                        else if (idbtn == 2) {
+                                            empName = "Aumenta su participación en gas"
+                                        }
+                                        else if (idbtn == 3) {
+                                            empName = "Incorpora mejoras en calidad de combustibles"
+                                        }
+                                        else if (idbtn == 4) {
+                                            empName = "Posiciona su rol Logístico en transporte"
+                                        }
+                                        else if (idbtn == 5) {
+                                            empName = "Aprovecha activos existentes en nuevos servicios"
+                                        }
+                                        else if (idbtn == 6) {
+                                            empName = "Se posiciona hacia la transición energética"
+                                        }
+
+                                        // Assign HTML codes along with text values using innerHTML.
+                                        lbl.innerHTML = empName;
+
+
+
+                                    };
+                                    function resetP1 () {
+                                        let lbl = document.getElementById('lblEmp');
+                                        lbl.innerHTML = "";
+                                        ( "#p1n" ).click();
+                                        return true;
+                                    };
+                                </script>
+							</section>
+
+						<!-- Panel 2 -->
+							<section class="panel spotlight medium item active" id="p2">
+								<div class="content color2" style="width:100%">
+                                    <ul class="actions">
+                                        <li style="position: absolute; top:30em; left:40px;"><a href="#p1" onclick="return resetP2();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p3" onclick="return resetP2();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+
+                                    <ul class="actions">
+                                        <li><input type="image" src="images/b1.png" id="b1" onclick="showElement(1)" style="width:2.5em; height:2.5em;"></li>
+                                        <li><input type="image" src="images/b2.png" id="b2" onclick="showElement(2)" style="width:2.5em; height:2.5em;"></li>
+                                        <li><input type="image" src="images/b3.png" id="b3" onclick="showElement(3)" style="width:2.5em; height:2.5em;"></li>
+									</ul>
+
+                                    <p align="center">
+                                        <label id="e1" style="border-radius: 25px;  background: #F4DB1B;  padding: 10px;  width: 270px;  height: auto; font-size:1.2em; text-align:center; color: #1C2747; visibility:hidden;">Estrategia 2020 Revisada<br> 4Q 2016</label></p>
+                                        <hr>
+                                    <p align="center">
+                                        <label id="e2" style="border-radius: 25px;  background: #F4DB1B;  padding: 10px;  width: 270px;  height: auto; font-size:1.2em; text-align:center; color: #1C2747; visibility:hidden;">Estrategia 2020+ <br> 4Q 2017</label></p>
+                                        <hr>
+                                    <p align="center">
+                                        <label id="e3" style="border-radius: 25px;  background: #F4DB1B;  padding: 10px;  width: 270px;  height: auto; font-size:1.2em; text-align:center; color: #1C2747; visibility:hidden;">Estrategia 2020 <br> 1Q 2015</label></p>
+
+
+								</div>
+                                <script>
+                                    function showElement(idbtn) {
+                                        let ele = document.getElementById('e'+idbtn);
+                                        console.log(ele);
+                                        ele.style.visibility='visible';
+                                        console.log(ele);
+                                        return true;
+                                    };
+                                    function resetP2() {
+                                        for (i = 1; i <= 3; i++) {
+                                            let ele = document.getElementById('e'+i);
+                                            ele.style.visibility='hidden';
+                                        }
+                                        return true;
+                                    }
+                                </script>
+
+							</section>
+
+
+                        <!-- Panel 3 -->
+							<section class="panel spotlight medium item active" id="p3">
+								<div class="content color2" style="width:100%">
+                                    <ul class="actions">
+                                        <li style="position: absolute; top:30em; left:40px;"><a href="#p2" onclick="return resetP3();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p4" onclick="return resetP3();" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <p align="center">
+                                        <input type="image" src="images/gallery/c1.png" id="btc1" onclick="changePicture(1)">
+                                        <input type="image" src="images/gallery/c2.png" id="btc2" onclick="changePicture(2)">
+                                        <br>
+                                        <input type="image" src="images/gallery/c3.png" id="btc3" onclick="changePicture(3)">
+                                        <input type="image" src="images/gallery/c4.png" id="btc4" onclick="changePicture(4)">
+                                    </p>
+
+
+								</div>
+                                <script type="text/javascript">
+                                    function changePicture(idbtn) {
+                                        let btn = document.getElementById('btc'+idbtn);
+                                        btn.src = "images/gallery/r"+idbtn+"-02.png";
+                                        btn.style="width:160px; height:130px; margin:0; padding:0";
+                                    };
+                                    function resetP3 () {
+                                        for (i = 1; i <= 4; i++) {
+                                            let btn = document.getElementById('btc'+i);
+                                            btn.src = "images/gallery/c"+i+".png";
+                                            btn.style="";
+                                        }
+                                        return true;
+                                    };
+                                </script>
+							</section>
+
+                        <!-- Panel 4 -->
+							<section class="panel spotlight medium item active" id="p4">
+								<div class="content color2" style="width:100%">
+									<ul class="actions">
+                                        <li style="position: absolute; top:30em; left:40px;"><a href="#p3" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p5" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <p align="center">
+                                        <img class="animated-gif" src="images/gallery/gif1.gif">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+								</div>
+							</section>
+
+
+                        <!-- Panel 5 -->
+							<section class="panel spotlight medium item active" id="p5">
+								<div class="content color2" style="width:100%">
+									<ul class="actions">
+                                        <li style="position: absolute; top:30em; left:40px;"><a href="#p4" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p6" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <p align="center">
+                                        <img class="animated-gif" src="images/gallery/gif2.gif">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+								</div>
+							</section>
+
+                        <!-- Panel 6 -->
+							<section class="panel spotlight medium item active" id="p6">
+								<div class="content color2" style="width:100%">
+									<ul class="actions">
+                                        <li style="position: absolute; top:30em; left:40px;"><a href="#p5" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p7" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <p align="center">
+                                        <img class="animated-gif" src="images/gallery/gif3.gif">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+								</div>
+							</section>
+
+
+                        <!-- Panel 7 -->
+							<section class="panel spotlight medium item active" id="p7">
+								<div class="content color2" style="width:100%">
+									<ul class="actions">
+                                        <li style="position: absolute; top:30em; left:40px;"><a href="#p6" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+                                        <li style="position: absolute; top:30em; right:40px;"><a href="#p8" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+									</ul>
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <p align="center">
+                                        <img class="animated-gif" src="images/gallery/gif4.gif">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+								</div>
+							</section>
+
+                        <!-- Panel 8 -->
+							<section class="panel spotlight medium item active" id="p8">
+								<div class="content color2" style="width:100%">
+
+                                    <p align="center" style="position:absolute; top:5%; margin-right: 3em; width:90%">
+                                        <img src="images/Logo.png" class="center" style="width:300px; height:150px;">
+                                    </p>
+                                    <div class="flex-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <ul class="actions">
+										        <li style="position: absolute; left:40px; z:10;"><a href="#p7" onclick="return resetP8();" class="button primary color1 circle icon fa-angle-left">Prev</a></li>
+									        </ul>
+                                        <div class="flex-container-vertical">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div id="divI">
+                                                <img id="iguana" src="images/gallery/i.png">
+                                            </div>
+                                            <ul id="play" class="actions">
+                                                <li><input type="image" src="images/play.png" onclick="changeMap()" style="width:3.5em; height:3.5em;"></li>
+                                            </ul>
+                                        </div>
+                                        <div class="panel">
+                                            <img id="divC" src="images/gallery/cn.png">
+                                        </div>
+                                    </div>
+
+
+								</div>
+                                <script>
+                                    document.getElementById("iguana").addEventListener("transitionend", changeMap);
+                                    function changeMap() {
+                                        let ele = document.getElementById('iguana');
+                                        ele.classList.add("divI");
+                                        let play = document.getElementById('play');
+                                        //ele.style.visibility = "hidden";
+                                        //console.log(ele);
+                                        play.style.visibility = "hidden";
+                                        setTimeout(function(){
+                                            let map = document.getElementById('divC');
+                                            map.src = "images/gallery/cv.png";
+                                            ele.style.visibility = "hidden";
+
+
+                                        }, 7000);
+
+
+                                        return true;
+                                    };
+                                    function resetP8() {
+                                        let ele = document.getElementById('iguana');
+                                        ele.classList.remove("divI");
+                                        ele.style.visibility = "visible";
+
+                                        let map = document.getElementById('divC');
+                                        map.src = "images/gallery/cn.png";
+
+                                        let play = document.getElementById('play');
+                                        play.style.visibility = "visible";
+                                        return true;
+                                    }
+                                </script>
+							</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
